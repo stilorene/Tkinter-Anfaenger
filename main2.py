@@ -14,8 +14,8 @@ entry_widget = tk.Entry(root)
 entry_widget.pack()
 
 
-def print_smth():
-    ttk.Label(root, text=entry_widget.get()).pack()
+# def print_smth():
+#     ttk.Label(root, text=entry_widget.get()).pack()
 
 button1 = tk.Button(root, text="Input löschen", padx=10, pady=10, command=delete_input, state=tk.NORMAL)
 button1.pack() 
