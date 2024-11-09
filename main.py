@@ -12,13 +12,20 @@ root.geometry("400x400")
 image = Image.open("Leopard.jpg").resize((300, 200)) # hier im Allgemeinen werden nur Bilder erstellt
 photo = ImageTk.PhotoImage(image)
 
+text_variable = tk.StringVar() #tk.IntVar(Ganzzahlen) tk.BooleanVar(Wahrheitswert)
+text_variable.set("Lol das is der neue Text")
+
+text_variable.set("Und das ist der andere Text der jetzt angezeigt wird")
+print(text_variable.get()) #man kann auch die get - Methode verwenden um zu sehen was in der Variable steht (Konsole)
+
 # image2 = Image.open("kunstwerk.jpg")
 # photo2 = ImageTk.PhotoImage(image2)
 
-Label1 = ttk.Label(root, text= "Das ist ein Bild Lol", image=photo, compound="top", padding=60, background="red")
+
+Label1 = ttk.Label(root, textvariable=text_variable , image=photo, compound="top", background="red")
 Label1.pack()
 
-Label1.config(font= ("Arial", 30))
+Label1.config(font= ("Arial", 10)) #mit config manuell Änderungen durchführen
 
 # print(Label1.keys()) # Anschauen was für Optionen für ein Widgets in der Konsole anzeigen lassen
 
